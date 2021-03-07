@@ -23,7 +23,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:paddingTop="16dp"
-                android:textColor="#FF4081"
+                android:textColor="#FF6200EE"
                 android:fontFamily="sans-serif-medium"
                 android:textAppearance="?android:textAppearanceSmall"
                 android:text="Overview" />
@@ -133,7 +133,7 @@
                 android:layout_width = "0dp"
                 android:paddingTop = "16dp"
                 android:textAppearance = "?android:textAppearanceSmall"
-                android:textColor ="#FF4081"
+                android:textColor ="#FF6200EE"
                 android:text="Price" />
 
             <com.google.android.material.textfield.TextInputLayout
@@ -175,7 +175,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:paddingTop="16dp"
-                android:textColor ="#FF4081"
+                android:textColor ="#FF6200EE"
                 android:fontFamily="sans-serif-medium"
                 android:textAppearance = "?android:textAppearanceSmall"
                 android:text="Supplier"
@@ -210,7 +210,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:paddingTop="16dp"
-                android:textColor ="#FF4081"
+                android:textColor ="#FF6200EE"
                 android:fontFamily="sans-serif-medium"
                 android:textAppearance = "?android:textAppearanceSmall"
                 android:layout_width="0dp"
