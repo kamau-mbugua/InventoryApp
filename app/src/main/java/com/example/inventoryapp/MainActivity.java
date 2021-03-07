@@ -45,6 +45,22 @@ public class MainActivity extends AppCompatActivity {
                 if (isOpen){
                     FABOdb.setAnimation(mFabClose);
                     fab.setAnimation(mFabClose);
+
+                    randomText.setVisibility(View.INVISIBLE);
+                    randomText1.setVisibility(View.INVISIBLE);
+
+                    isOpen = false;
+                }
+
+                else {
+                    FABOdb.setAnimation(mFabOpen);
+                    fab.setAnimation(mFabOpen);
+
+                    randomText.setVisibility(View.VISIBLE);
+                    randomText1.setVisibility(View.VISIBLE);
+
+                    isOpen = true;
+
                 }
 
             }
