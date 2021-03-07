@@ -15,7 +15,7 @@ import com.example.inventoryapp.R;
 import com.example.inventoryapp.Utils;
 import com.example.inventoryapp.Product;
 import com.example.inventoryapp.Warehouse;
-import com.example.inventoryapp.
+import com.example.inventoryapp.ProductActivity;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;

@@ -54,4 +54,8 @@
 
     <!-- Label for supplier 10 contact dropdown menu option [CHAR LIMIT=20] -->
     <string name="supplier_10">Booksmith</string>
+    <string name="product_fragment_title">Product Information</string>
+    <string name="list_item_price_label">Price: KES</string>
+    <string name="product_order_more_email_subject">REQUIRE SHIPMENT</string>
+    <string name="product_decrease_button_negative">Product Quantity cannot be less than zero</string>
 </resources>
