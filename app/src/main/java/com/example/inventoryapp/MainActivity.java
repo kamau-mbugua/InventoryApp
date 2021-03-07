@@ -7,6 +7,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -16,13 +19,38 @@ public class MainActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private CatalogAdapter adapter;
+    private Animation mFabOpen, mFabClose;
+
+    FloatingActionButton fab, FABOdb;
+    TextView randomText,randomText1;
+
+    private boolean isOpen = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        FloatingActionButton fab = findViewById(R.id.fab);
+        mFabOpen = AnimationUtils.loadAnimation(this, R.anim.fab_open);
+        mFabClose = AnimationUtils.loadAnimation(this, R.anim.fab_close);
+
+
+        FABOdb = findViewById(R.id.FABOdb);
+        randomText= findViewById(R.id.randomText);
+        randomText1= findViewById(R.id.randomText1);
+        FloatingActionButton fMain = findViewById(R.id.main_fab);
+        fMain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (isOpen){
+                    FABOdb.setAnimation(mFabClose);
+                    fab.setAnimation(mFabClose);
+                }
+
+            }
+        });
+
+        fab = findViewById(R.id.fab);
         fab.setOnClickListener(view -> {
             Product product = new Product();
             Warehouse.getInstance(this).addProduct(product);
