@@ -197,7 +197,7 @@
             android:id="@+id/product_save"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/top_margin_order_more_button"
+            android:layout_marginTop="80dp"
             android:text="SAVE THE INVENTORY" />
 
         <!-- Button to order more from product supplier -->
@@ -205,8 +205,8 @@
             android:id="@+id/product_order_more"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/top_margin_order_more_button"
-            android:text="@string/product_order_more_label" />
+            android:layout_marginTop="50dp"
+            android:text="Order More" />
 
     </LinearLayout>
 
