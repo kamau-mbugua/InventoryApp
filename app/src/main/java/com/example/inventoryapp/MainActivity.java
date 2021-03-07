@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -63,6 +64,13 @@ public class MainActivity extends AppCompatActivity {
 
                 }
 
+            }
+        });
+
+        FABOdb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this, "Comming Soon!!", Toast.LENGTH_SHORT).show();
             }
         });
 
