@@ -10,6 +10,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
@@ -45,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         mFabOpen = AnimationUtils.loadAnimation(this, R.anim.fab_open);
         mFabClose = AnimationUtils.loadAnimation(this, R.anim.fab_close);
 
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        /*toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_menu_24);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -58,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         //View drawerHeader = nvDrawer.inflateHeaderView(R.layout.drawer_header);
         setupDrawerContent(nvDrawer);
         
-        mDrawer.addDrawerListener(drawerToggle);
+        mDrawer.addDrawerListener(drawerToggle);*/
 
 
         FABOdb = findViewById(R.id.FABOdb);
@@ -95,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
         FABOdb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Coming Soon!!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Comming Soon!!", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -122,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
     }
 
-    private void setupDrawerContent(NavigationView nvDrawer) {
+    /*private void setupDrawerContent(NavigationView nvDrawer) {
         nvDrawer.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -130,28 +132,50 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
-    }
+    }*/
 
-    private void selectDrawerItem(MenuItem item) {
+    /*private void selectDrawerItem(MenuItem item) {
         switch (item.getItemId()){
             case R.id.nav_aboutus:
                 Toast.makeText(this, "Implemented soon", Toast.LENGTH_SHORT).show();
-               /* startActivity(new Intent(getApplicationContext(),HistoryActivity.class));
-                */finish();
+               *//* startActivity(new Intent(getApplicationContext(),HistoryActivity.class));
+                *//*finish();
                 break;
             case R.id.nav_help:
                 Toast.makeText(this, "Implemenetd soon", Toast.LENGTH_SHORT).show();
-               /* startActivity(new Intent(getApplicationContext(),AboutUsActivity.class));
-                */finish();
+               *//* startActivity(new Intent(getApplicationContext(),AboutUsActivity.class));
+                *//*finish();
                 break;
+            default:
         }
+    }
+*/
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.app_menu, menu);
+        return true;
+        //return super.onCreateOptionsMenu(menu);
+
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (drawerToggle.onOptionsItemSelected(item)){
-            return true;
-        }return super.onOptionsItemSelected(item);
+        switch (item.getItemId()) {
+            case R.id.nav_aboutus:
+                Toast.makeText(this, "Implemented soon", Toast.LENGTH_SHORT).show();
+
+                startActivity(new Intent(getApplicationContext(), About.class));
+                finish();
+                break;
+            case R.id.nav_help:
+                Toast.makeText(this, "Implemenetd soon", Toast.LENGTH_SHORT).show();
+                break;
+            default:
+
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private ActionBarDrawerToggle setupDrawerToggle() {
