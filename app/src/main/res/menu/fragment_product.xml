@@ -8,7 +8,7 @@
         android:title="Delete"
         app:showAsAction="always" />
     <group android:checkableBehavior="single">
-        <item android:title="T-Boda">
+        <item android:title="Inventory App">
             <menu>
                 <group android:checkableBehavior="single">
                     <item
