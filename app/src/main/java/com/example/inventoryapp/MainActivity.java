@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
         FABOdb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Comming Soon!!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Coming Soon!!", Toast.LENGTH_SHORT).show();
             }
         });
 
