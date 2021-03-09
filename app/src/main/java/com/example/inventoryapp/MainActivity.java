@@ -132,6 +132,21 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    private void selectDrawerItem(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.nav_aboutus:
+                Toast.makeText(this, "Implemented soon", Toast.LENGTH_SHORT).show();
+               /* startActivity(new Intent(getApplicationContext(),HistoryActivity.class));
+                */finish();
+                break;
+            case R.id.nav_help:
+                Toast.makeText(this, "Implemenetd soon", Toast.LENGTH_SHORT).show();
+               /* startActivity(new Intent(getApplicationContext(),AboutUsActivity.class));
+                */finish();
+                break;
+        }
+    }
+
     private ActionBarDrawerToggle setupDrawerToggle() {
     }
 

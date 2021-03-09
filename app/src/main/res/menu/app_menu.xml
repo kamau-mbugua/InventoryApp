@@ -11,7 +11,7 @@
                         android:title="About Us"
                         />
                     <item
-                        android:id="@+id/nav_logOut"
+                        android:id="@+id/nav_help"
                         android:icon="@drawable/ic_baseline_help_24"
                         android:title="Help"/>
                 </group>
