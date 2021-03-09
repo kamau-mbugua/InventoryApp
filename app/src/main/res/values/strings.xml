@@ -58,4 +58,6 @@
     <string name="list_item_price_label">Price: KES</string>
     <string name="product_order_more_email_subject">REQUIRE SHIPMENT</string>
     <string name="product_decrease_button_negative">Product Quantity cannot be less than zero</string>
+    <string name="drawer_open">Open the Navigation panel</string>
+    <string name="drawer_close">Close the Navigation panel</string>
 </resources>
