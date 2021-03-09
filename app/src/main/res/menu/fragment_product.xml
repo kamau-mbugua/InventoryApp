@@ -7,23 +7,6 @@
         android:icon="@drawable/ic_delete"
         android:title="Delete"
         app:showAsAction="always" />
-    <group android:checkableBehavior="single">
-        <item android:title="Inventory App">
-            <menu>
-                <group android:checkableBehavior="single">
-                    <item
-                        android:id="@+id/nav_aboutus"
-                        android:icon="@drawable/ic_baseline_info_24"
-                        android:title="About Us"
-                        />
-                    <item
-                        android:id="@+id/nav_logOut"
-                        android:icon="@drawable/ic_baseline_help_24"
-                        android:title="Help"/>
-                </group>
-            </menu>
-        </item>
 
-    </group>
 
 </menu>
