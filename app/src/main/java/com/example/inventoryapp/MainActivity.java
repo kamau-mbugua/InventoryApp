@@ -1,11 +1,16 @@
 package com.example.inventoryapp;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -13,10 +18,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.navigation.NavigationView;
 
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+
+    private DrawerLayout mDrawer;
+    private Toolbar toolbar;
+    private ActionBarDrawerToggle drawerToggle;
 
     private RecyclerView recyclerView;
     private CatalogAdapter adapter;
@@ -34,6 +44,21 @@ public class MainActivity extends AppCompatActivity {
 
         mFabOpen = AnimationUtils.loadAnimation(this, R.anim.fab_open);
         mFabClose = AnimationUtils.loadAnimation(this, R.anim.fab_close);
+
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_menu_24);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        // Tie DrawerLayout events to the ActionBarToggle.
+        drawerToggle = setupDrawerToggle();
+
+        // Attach listener to drawer menuitems and handle user selections.
+        NavigationView nvDrawer = (NavigationView) findViewById(R.id.nvView);
+        //View drawerHeader = nvDrawer.inflateHeaderView(R.layout.drawer_header);
+        setupDrawerContent(nvDrawer);
+        
+        mDrawer.addDrawerListener(drawerToggle);
 
 
         FABOdb = findViewById(R.id.FABOdb);
@@ -95,6 +120,19 @@ public class MainActivity extends AppCompatActivity {
 
         adapter = new CatalogAdapter(this, products);
         recyclerView.setAdapter(adapter);
+    }
+
+    private void setupDrawerContent(NavigationView nvDrawer) {
+        nvDrawer.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                selectDrawerItem(item);
+                return false;
+            }
+        });
+    }
+
+    private ActionBarDrawerToggle setupDrawerToggle() {
     }
 
     @Override
